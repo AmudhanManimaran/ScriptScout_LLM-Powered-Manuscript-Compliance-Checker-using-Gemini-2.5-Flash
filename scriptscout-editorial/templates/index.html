@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ScriptScout | Editorial Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="academic-container">
+        <header>
+            <h1>ScriptScout Editorial Audit</h1>
+            <p>Automated Academic Compliance & NLP Analysis</p>
+        </header>
+        <div class="upload-box">
+            <input type="file" id="paper-file" accept=".pdf,.docx">
+            <button onclick="checkCompliance()">Run Editorial Audit</button>
+        </div>
+        <div id="loading" style="display:none;">Analyzing Manuscript Structure...</div>
+        <div id="report-view" class="report-card"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
